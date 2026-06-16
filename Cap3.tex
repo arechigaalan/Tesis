@@ -1,0 +1,103 @@
+\chapter{Desarrollo}
+
+\textbf{Cómo citar utilizando BibLaTeX}
+
+BibLaTeX es una herramienta  para gestionar y generar referencias en documentos escritos con LaTeX. Ofrece una variedad de comandos para citar fuentes de manera adecuada según el contexto.
+
+A continuación, se describe cómo usar los principales comandos para citar y se incluyen ejemplos prácticos.
+
+\textbf{Comandos principales para citar}
+
+\begin{enumerate}
+    \item \textbackslash cite
+    Este comando genera una cita compacta que usualmente incluye solo el autor y el año, o un número si se utiliza un estilo numérico.
+
+    Uso típico: Se emplea en notas al pie o en listados donde no es necesario integrar la cita en el texto.
+    
+    Ejemplo:
+    
+    
+    Según los resultados presentados en varios estudios \textbackslash cite\{smith2010data\}, el modelo es efectivo.
+    
+    Según los resultados presentados en varios estudios \cite{smith2010data}, el modelo es efectivo.
+    
+    \item \textbackslash parencite
+
+    Genera una cita entre paréntesis que incluye el autor y el año o el identificador correspondiente al estilo elegido.
+    Uso típico: Ideal para citas parentéticas en texto fluido.
+
+    Ejemplo:
+
+    El rendimiento de los sistemas GNSS ha sido evaluado (véase \textbackslash parencite\{johnson2015gps\}).
+
+
+    El rendimiento de los sistemas GNSS ha sido evaluado (véase \parencite{johnson2015gps}).
+
+    \item \textbackslash textcite
+
+    Integra la referencia directamente en el flujo del texto, mencionando explícitamente el nombre del autor y el año.
+    Uso típico: Perfecto para dar énfasis a los autores en el cuerpo del texto.
+
+    Ejemplo:
+
+    \textbackslash textcite\{doe2018antenna\} destacan que las antenas log-periódicas son altamente efectivas para aplicaciones de radar.
+
+    \textcite{doe2018antenna} destacan que las antenas log-periódicas son altamente efectivas para aplicaciones de radar.
+
+\end{enumerate}
+
+\textbf{Ejemplo práctico de uso en un documento}
+
+El desarrollo de antenas para aplicaciones de radar ha sido un tema de amplio interés. \textbackslash textcite\{smith2010data\} propusieron un diseño optimizado para frecuencias de microondas. Otros estudios, como los de \textbackslash parencite\{johnson2015gps\}, se han enfocado en la integración con sistemas GNSS.
+
+Un análisis comparativo demuestra que \textbackslash cite\{doe2018antenna\} lograron mejores resultados al implementar estructuras log-periódicas.
+
+
+El desarrollo de antenas para aplicaciones de radar ha sido un tema de amplio interés. \textcite{smith2010data} propusieron un diseño optimizado para frecuencias de microondas. Otros estudios, como los de \parencite{johnson2015gps}, se han enfocado en la integración con sistemas GNSS.
+
+Un análisis comparativo demuestra que \cite{doe2018antenna} lograron mejores resultados al implementar estructuras log-periódicas.
+
+\textbf{Citas con varias fuentes}
+
+Cuando necesitas citar varias fuentes al mismo tiempo con BibLaTeX, puedes incluir múltiples claves de entrada en el mismo comando de citación, separadas por comas. Esto se aplica a los comandos como \textbackslash cite, \textbackslash parencite y \textbackslash textcite. A continuación, se muestra cómo hacerlo con ejemplos prácticos.
+
+Ejemplo de citar varios autores al mismo tiempo
+
+\begin{enumerate}
+    \item Con \textbackslash cite
+
+    Genera una cita compacta con todas las fuentes mencionadas.
+    
+    Diversos estudios han analizado el impacto de las antenas log-periódicas en aplicaciones de radar \textbackslash cite\{smith2010data, johnson2015gps, doe2018antenna\}.
+
+    Diversos estudios han analizado el impacto de las antenas log-periódicas en aplicaciones de radar \cite{smith2010data, johnson2015gps, doe2018antenna}.
+
+    \item Con \textbackslash parencite
+
+    Incluye la lista de citas en un formato parentético.
+    
+    El rendimiento del sistema ha sido evaluado previamente (véase \textbackslash parencite\{smith2010data, johnson2015gps, doe2018antenna\}).
+
+    El rendimiento del sistema ha sido evaluado previamente (véase \parencite{smith2010data, johnson2015gps, doe2018antenna}).
+
+    \item Con \textbackslash textcite
+
+    Integra varios autores en el texto.
+    
+    Trabajos recientes como los de \textbackslash textcite\{smith2010data\}, \textbackslash textcite\{johnson2015gps\} y \textbackslash textcite\{doe2018antenna\} han destacado diferentes aspectos del diseño y rendimiento de estas tecnologías.
+
+    Trabajos recientes como los de \textcite{smith2010data}, \textcite{johnson2015gps} y \textcite{doe2018antenna} han destacado diferentes aspectos del diseño y rendimiento de estas tecnologías.
+    
+\end{enumerate}
+
+\textbf{Resumen de recomendaciones para citar}
+
+\begin{enumerate}
+    \item \textbackslash cite: Úsalo para citas generales o en listados compactos.
+    \item \textbackslash parencite: Utilízalo cuando necesites incluir la cita entre paréntesis.
+    \item \textbackslash textcite: Prefiérelo para integrar la referencia de forma fluida en el texto.
+\end{enumerate}
+
+El archivo Referencias.bib es donde se almacenan las entradas bibliográficas.
+
+Esta flexibilidad te permite adaptar tus citas al estilo de redacción que prefieras, manteniendo un formato académico correcto.

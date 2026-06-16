@@ -1,0 +1,1 @@
+$pdflatex='/Library/TeX/texbin/pdflatex -shell-escape %O %S';

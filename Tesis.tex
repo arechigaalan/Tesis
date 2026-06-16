@@ -1,0 +1,147 @@
+% ==================================================================
+% INICIA PREÁMBULO DEL DOCUMENTO
+% ==================================================================
+
+% -----------DECLARACIÓN DE TIPO DE DOCUMENTO A DISEÑAR-------------
+
+\documentclass[12pt]{uaztesis}
+
+% % --------------DECLARACIÓN DE PAQUETES A UTILIZAR------------------
+
+\usepackage[spanish,mexico]{babel}
+\usepackage{subfigure}
+\usepackage{multirow,rotating}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{amssymb,amsmath,ams fonts}
+\usepackage{tabularx,colortbl,xspace,rotating,booktabs,longtable,multirow}
+\usepackage{soulutf8}
+\usepackage{multirow} % para las tablas
+\usepackage{longtable} % para tablas largas
+\usepackage{multirow, array} % para las tablas
+\usepackage{float} % para usar [H]
+\usepackage{color,curves}
+\usepackage{chngcntr}
+\usepackage{minted}
+\usepackage{csquotes}
+\usepackage{pdfpages}
+
+\renewcommand\listingscaption{C\'odigo}
+\numberwithin{listing}{chapter}
+
+% % --DECLARACIÓN DE RUTA DE CARPETA DONDE SE ENCUENTRAN LAS FIGURAS--
+\graphicspath{{Imagenes/}}
+\psfull
+
+% % --------------DECLARACIÓN DEL ESTILO DE PÁGINA--------------------
+\pagestyle{thesis}
+\noappendixtables
+\noappendixfigures
+
+% % ===================================================================
+% % INICIA EL CONTENIDO DEL DOCUMENTO
+% % ===================================================================
+
+\begin{document}
+
+%\thesism % Tesis de maestria
+\thesisd % Tesis de doctorado
+%\thesis % Tesis licenciatura
+%\degree{Ingeniero en Robótica y Mecatrónica} % Solo para licenciatura
+
+% % Introducción en sílabas de palabras desconocidas por LaTeX
+ \hyphenation{}
+
+% % Declaración de número de páginas en números Romanos
+ \clearpage\pagenumbering{roman}
+
+% % ------------------INTRODUCCIÓN DE DATOS----------------------------
+
+% % Título de la tesis, autor, y grado a recibir:
+\title{Título de la tesis} 
+\author{Estudiante}
+
+% % Grado y nombre de asesores de tesis:
+\advisortitle{Grado} \advisorname{Asesor} 
+\gradosegundoasesor{Grado} \nombresegundoasesor{Asesor}
+\gradotercerasesor{Grado} \nombretercerasesor{Asesor} % Si no hay tercer asesor, dejar en blanco
+
+\date{\the\year{}}
+
+% % ---------GENERACIÓN DE PÁGINAS PRELIMINARES DEL DOCUMENTO----------
+
+% % Genera página de presentación
+ \maketitle
+% % Se incluyen los documentos de parte del posgrado
+
+\includepdf[pages=-]{Adjuntos/autorizaciontesis.pdf}
+\includepdf[pages=-]{Adjuntos/cesionderechostesis.pdf}
+\includepdf[pages=-,scale=0.85]{Adjuntos/cartadesimilitud.pdf}
+
+ % % Genera páginas de resumen
+\begin{resumen}
+  \input{01_Resumen.tex}          
+\end{resumen}
+
+\begin{abstract}
+  \input{02_Abstract.tex}          
+\end{abstract}
+
+% % Genera página de dedicatoria
+\begin{dedicatoria}
+  \input{03_Dedicatoria}          
+\end{dedicatoria}
+
+ % Genera página de agradecimientos
+\begin{agradecimientos}
+  \input{04_Agradecimientos}        
+\end{agradecimientos}
+
+% % Genera páginas del contenido general y lista de figuras y tablas
+\tableofcontents
+\listoffigures                 
+\listoftables                  
+
+\begin{nomenclatura}
+    \input{05_Nomenclatura}
+\end{nomenclatura}
+
+\begin{listofsymbols}
+    \input{06_Simbolos}
+\end{listofsymbols}
+
+\begin{glosario}
+   \input{07_Glosario}
+\end{glosario}
+
+% %--------INCLUSIÓN DE LOS ARCHIVOS (CAPÍTULOS) DEL DOCUMENTO--------
+
+% % Declaración de número de páginas en números Arábigos
+ \clearpage\pagenumbering{arabic}
+
+% incluye los captitulos de la tesis
+\input{Cap1}
+\input{Cap2}
+\input{Cap3}
+\input{Cap4}
+\input{Cap5}
+
+% % ------------------INTRODUCCIÓN DE REFERENCIAS---------------------
+
+\nocite{*}
+\chapter*{Referencias bibliográficas}     
+\addcontentsline{toc}{chapter}{Referencias bibliográficas}
+\printbibliography[heading=none]
+
+% % ---------------------INTRODUCCIÓN DE APÉNDICES--------------------
+
+\begin{apendices}
+\input{A_apen}
+\input{B_apen}
+\end{apendices}
+
+
+\end{document}
