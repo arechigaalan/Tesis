@@ -47,25 +47,25 @@
 
 \begin{document}
 
-%\thesism % Tesis de maestria
-\thesisd % Tesis de doctorado
+\thesism % Tesis de maestria
+%\thesisd % Tesis de doctorado
 %\thesis % Tesis licenciatura
 %\degree{Ingeniero en Robótica y Mecatrónica} % Solo para licenciatura
 
 % % Introducción en sílabas de palabras desconocidas por LaTeX
- \hyphenation{}
+\hyphenation{}
 
 % % Declaración de número de páginas en números Romanos
- \clearpage\pagenumbering{roman}
+\clearpage\pagenumbering{roman}
 
 % % ------------------INTRODUCCIÓN DE DATOS----------------------------
 
 % % Título de la tesis, autor, y grado a recibir:
-\title{Título de la tesis} 
-\author{Estudiante}
+\title{Reconocimiento de información textual alfanumérica grabada sobre superficies metálicas con bajo contraste mediante técnicas de visión por computadora.}
+\author{Alan Martín Romo Aréchiga}
 
 % % Grado y nombre de asesores de tesis:
-\advisortitle{Grado} \advisorname{Asesor} 
+\advisortitle{Grado} \advisorname{Asesor}
 \gradosegundoasesor{Grado} \nombresegundoasesor{Asesor}
 \gradotercerasesor{Grado} \nombretercerasesor{Asesor} % Si no hay tercer asesor, dejar en blanco
 
@@ -74,53 +74,53 @@
 % % ---------GENERACIÓN DE PÁGINAS PRELIMINARES DEL DOCUMENTO----------
 
 % % Genera página de presentación
- \maketitle
+\maketitle
 % % Se incluyen los documentos de parte del posgrado
 
 \includepdf[pages=-]{Adjuntos/autorizaciontesis.pdf}
 \includepdf[pages=-]{Adjuntos/cesionderechostesis.pdf}
 \includepdf[pages=-,scale=0.85]{Adjuntos/cartadesimilitud.pdf}
 
- % % Genera páginas de resumen
+% % Genera páginas de resumen
 \begin{resumen}
-  \input{01_Resumen.tex}          
+  \input{01_Resumen.tex}
 \end{resumen}
 
 \begin{abstract}
-  \input{02_Abstract.tex}          
+  \input{02_Abstract.tex}
 \end{abstract}
 
 % % Genera página de dedicatoria
 \begin{dedicatoria}
-  \input{03_Dedicatoria}          
+  \input{03_Dedicatoria}
 \end{dedicatoria}
 
- % Genera página de agradecimientos
+% Genera página de agradecimientos
 \begin{agradecimientos}
-  \input{04_Agradecimientos}        
+  \input{04_Agradecimientos}
 \end{agradecimientos}
 
 % % Genera páginas del contenido general y lista de figuras y tablas
 \tableofcontents
-\listoffigures                 
-\listoftables                  
+\listoffigures
+\listoftables
 
 \begin{nomenclatura}
-    \input{05_Nomenclatura}
+  \input{05_Nomenclatura}
 \end{nomenclatura}
 
 \begin{listofsymbols}
-    \input{06_Simbolos}
+  \input{06_Simbolos}
 \end{listofsymbols}
 
 \begin{glosario}
-   \input{07_Glosario}
+  \input{07_Glosario}
 \end{glosario}
 
 % %--------INCLUSIÓN DE LOS ARCHIVOS (CAPÍTULOS) DEL DOCUMENTO--------
 
 % % Declaración de número de páginas en números Arábigos
- \clearpage\pagenumbering{arabic}
+\clearpage\pagenumbering{arabic}
 
 % incluye los captitulos de la tesis
 \input{Cap1}
@@ -132,15 +132,15 @@
 % % ------------------INTRODUCCIÓN DE REFERENCIAS---------------------
 
 \nocite{*}
-\chapter*{Referencias bibliográficas}     
+\chapter*{Referencias bibliográficas}
 \addcontentsline{toc}{chapter}{Referencias bibliográficas}
 \printbibliography[heading=none]
 
 % % ---------------------INTRODUCCIÓN DE APÉNDICES--------------------
 
 \begin{apendices}
-\input{A_apen}
-\input{B_apen}
+  \input{A_apen}
+  \input{B_apen}
 \end{apendices}
 
 
