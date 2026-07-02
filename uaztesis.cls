@@ -704,21 +704,21 @@ Eléctrica}
       \end{figure}
       \vspace*{15pt}
       {\bf\expandafter\uppercase\expandafter{\@title}} \\  
-      \vspace*{24pt}
+      \vfill
       {\bf\@author} \\ 
-      \vspace*{40pt}
+      \vfill
       \@doctype\ \\
       presentada a la \@department \\
       de acuerdo a los requerimientos de la Universidad 
       para obtener el título de \\
-      \vspace*{48pt}
+      \vfill
       {\bf\expandafter\uppercase\expandafter{\@degree}} \\
       \vfill
       \small{Directores de tesis: \\ 
       \@advisortitle\ \@advisorname\ \\ 
       \@gradosegundoasesor\ \@nombresegundoasesor\ \\
       \@gradotercerasesor\ \@nombretercerasesor\ }\\
-      \vspace*{16pt}
+      \vfill
       \small{UNIDAD ACADÉMICA DE INGENIERÍA ELÉCTRICA \\
       \vspace*{8pt}
       Zacatecas, Zac.,} \@date \\
