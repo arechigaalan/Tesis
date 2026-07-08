@@ -708,6 +708,7 @@ Eléctrica}
       {\bf\@author} \\ 
       \vfill
       \@doctype\ \\
+      \vfill
       presentada a la \@department \\
       de acuerdo a los requerimientos de la Universidad 
       para obtener el título de \\
