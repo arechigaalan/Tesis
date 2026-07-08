@@ -1,5 +1,0 @@
-PWD /run/user/1000/gvfs/smb-share:server=synology-ivan.local,share=cloudstorage/innovaciontecnologica@uaz.edu.mx/Posgrado en Ingenieria para la Innovacion Tecnologica/10000 Documentación/15000 Formatos oficiales de posgrado/15300 Latex/Plantilla de Tesis
-INPUT /usr/local/texlive/2025/texmf.cnf
-INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /run/user/1000/gvfs/smb-share:server=synology-ivan.local,share=cloudstorage/innovaciontecnologica@uaz.edu.mx/Posgrado en Ingenieria para la Innovacion Tecnologica/10000 Documentación/15000 Formatos oficiales de posgrado/15300 Latex/Plantilla de Tesis/Tesis.tex
