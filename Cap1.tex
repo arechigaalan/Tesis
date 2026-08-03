@@ -1,47 +1,73 @@
 \chapter{Introducción}
 
-La introducción de una tesis es fundamental porque presenta el tema, los objetivos y la relevancia de la investigación.
+En los entornos productivos, la identificación y el seguimiento de piezas y componentes son necesarios para conservar la trazabilidad a lo largo de las etapas de fabricación, inspección, mantenimiento y control. Para ello, se emplean distintos mecanismos de marcado que permiten mantener asociada información específica con cada objeto, incluso cuando este permanece en servicio durante periodos prolongados.
 
-Para ello se comienza con el Contexto y Antecedentes:
+Entre estos mecanismos se encuentra el uso de información textual alfanumérica para identificar piezas, componentes, herramientas y estructuras. Los números de serie, códigos de fabricación, identificadores vehiculares y datos de trazabilidad permiten distinguir un objeto, consultar sus antecedentes o relacionarlo con un proceso de producción, mantenimiento o verificación. En numerosos casos, esta información se graba directamente sobre superficies metálicas con el propósito de mantenerla asociada físicamente con el objeto durante su vida útil.
 
-\begin{enumerate}
-    \item Proporciona una visión general del tema de estudio.
-    \item Explica por qué este tema es importante y relevante.
-    \item Resalta los antecedentes históricos o teóricos necesarios para entender el problema de investigación.
-\end{enumerate}
+La recuperación automática de esta información tiene aplicaciones en sectores industriales, automotrices y forenses. Dentro de la manufactura, puede apoyar la identificación de componentes y el seguimiento de piezas; en el ámbito automotriz, permite consultar identificadores utilizados para la verificación de vehículos; mientras que, en tareas de inspección o análisis forense, puede contribuir a recuperar información que no resulta fácilmente legible mediante una observación directa. Por estas razones, la detección y el reconocimiento de texto presente en imágenes constituyen un campo relevante dentro de la visión por computadora \parencite{Pal2024}.
+
+A diferencia del texto contenido en documentos impresos o digitales, los caracteres grabados sobre metal forman parte de la propia superficie. El fondo y la información alfanumérica suelen compartir el mismo material y presentar una apariencia semejante, por lo que la identificación del texto depende de las variaciones visuales generadas por los trazos, los bordes y el relieve del grabado. Esta característica provoca que los métodos diseñados para documentos con fondos uniformes y caracteres claramente diferenciados no siempre puedan aplicarse de manera directa.
+
+El reconocimiento de información grabada sobre superficies metálicas puede verse afectado por diversas condiciones, entre ellas el bajo contraste, el desgaste, la corrosión, las rayaduras, la suciedad, las variaciones de iluminación y la pérdida parcial de los caracteres. Investigaciones anteriores han abordado algunas de estas dificultades mediante técnicas de adquisición, procesamiento digital de imágenes y reconocimiento automático \parencite{Xiang2018,Yasak2020}. Sin embargo, cada fenómeno modifica de manera distinta la representación visual del texto y requiere tratamientos particulares.
+
+Dentro de este conjunto de dificultades, la presente investigación se concentra en el bajo contraste entre los caracteres alfanuméricos grabados y la superficie metálica. Esta condición se presenta cuando las diferencias visuales entre ambas regiones son reducidas, lo que dificulta distinguir los trazos que conforman los caracteres. A partir de esta delimitación, se propone estudiar de qué manera un proceso computacional basado en visión por computadora e inteligencia artificial puede mejorar la recuperación y el reconocimiento de dicha información.
 
 \section{Planteamiento del problema}
+\label{sec:planteamiento_problema}
 
-\begin{enumerate}
-    \item Define claramente el problema específico que tu investigación abordará.
-    \item Explica las brechas en el conocimiento existente que tu estudio pretende llenar.
-    \item Justifica la necesidad de investigar este problema.
-\end{enumerate}
+En las imágenes de superficies metálicas, el bajo contraste se presenta cuando los valores de intensidad correspondientes a los caracteres grabados son cercanos a los del fondo. En estas condiciones, los trazos pueden conservarse físicamente sobre la pieza y, aun así, no mostrarse con suficiente claridad en la imagen digital para ser analizados de manera automática.
+
+El bajo contraste reduce la separabilidad visual entre los caracteres y el fondo. Al existir poca diferencia entre las intensidades de ambas regiones, resulta difícil determinar qué píxeles pertenecen al texto y cuáles corresponden a la superficie. Como consecuencia, pueden perderse bordes, líneas, curvas y espacios internos necesarios para delimitar e identificar cada símbolo alfanumérico.
+
+Esta pérdida afecta la información discriminante disponible durante el reconocimiento. Algunos caracteres presentan estructuras semejantes y solo pueden distinguirse mediante pequeñas diferencias en sus trazos. Cuando estas características quedan atenuadas, un proceso automático puede omitir partes del texto, confundirlas con el fondo o identificar un carácter de manera incorrecta.
+
+Los métodos de reconocimiento óptico de caracteres suelen obtener mejores resultados cuando el texto presenta contornos definidos y una diferencia perceptible respecto del fondo. Sin embargo, en imágenes capturadas fuera de condiciones documentales controladas, las variaciones en la apariencia del texto continúan dificultando su localización y reconocimiento \parencite{Pal2024}. En el caso de los grabados metálicos con bajo contraste, el procesamiento directo de la imagen puede resultar insuficiente debido a que las características necesarias para reconocer los caracteres no se encuentran representadas con suficiente claridad.
+
+Por lo tanto, el problema de investigación consiste en la dificultad para recuperar y reconocer información textual alfanumérica grabada sobre superficies metálicas cuando la similitud visual entre los caracteres y el fondo reduce su contraste y separabilidad. Ante esta problemática, se plantea desarrollar un proceso computacional basado en visión por computadora e inteligencia artificial que permita mejorar la representación visual del grabado y favorecer su detección y reconocimiento.
+
+A partir de lo anterior, se formula la siguiente pregunta de investigación:
+
+\begin{quote}
+    ¿Cómo puede un proceso computacional basado en visión por computadora e inteligencia artificial mejorar la recuperación y el reconocimiento de información textual alfanumérica grabada sobre superficies metálicas cuando existe bajo contraste entre los caracteres y el fondo?
+\end{quote}
 
 \section{Hipótesis}
+\label{sec:hipotesis}
 
-\begin{enumerate}
-    \item En investigaciones cuantitativas, enuncia las hipótesis que serán probadas.
-    \item Explica brevemente cómo se probarán estas hipótesis.
-\end{enumerate}
+La aplicación de técnicas de visión por computadora e inteligencia artificial para mejorar el contraste de imágenes de superficies metálicas incrementará la separabilidad visual entre los caracteres alfanuméricos grabados y el fondo, mejorando su detección y reconocimiento automático.
 
 \section{Justificación}
+\label{sec:justificacion}
 
-\begin{enumerate}
-    \item Explica por qué tu investigación es importante.
-    \item Destaca la relevancia académica, social, económica, o práctica del estudio.
-    \item Menciona quiénes se beneficiarán de los hallazgos de tu investigación.
-\end{enumerate}
+La recuperación de información textual alfanumérica grabada sobre superficies metálicas es relevante debido a que estos identificadores se utilizan en procesos de trazabilidad, inspección, mantenimiento y verificación. Cuando el bajo contraste dificulta su lectura, la identificación de una pieza puede depender de la observación manual o de condiciones de captura específicas, lo que limita la automatización del proceso y puede incrementar la posibilidad de errores.
 
-\section{Objetivos}
+Desde el punto de vista académico, esta investigación permitirá estudiar la relación entre el contraste de una imagen, la separabilidad visual de los caracteres y el desempeño de los métodos de detección y reconocimiento. Aunque se han desarrollado diferentes técnicas para el procesamiento de texto en imágenes, el reconocimiento de caracteres grabados sobre metal continúa presentando dificultades cuando el texto y el fondo poseen una apariencia semejante \parencite{Pal2024,Xiang2018,Yasak2020}. El análisis de esta condición puede aportar evidencia sobre la utilidad de integrar técnicas de mejora de contraste con métodos de visión por computadora e inteligencia artificial.
+
+La relevancia práctica del estudio radica en el desarrollo de un proceso computacional que favorezca la lectura automática de información que no se distingue con claridad en las imágenes originales. Una mejora en la recuperación de estos caracteres podría apoyar tareas de identificación y verificación, disminuir la dependencia de la inspección visual y facilitar el procesamiento de conjuntos de imágenes dentro de aplicaciones industriales, automotrices y forenses.
+
+Los resultados podrán ser de utilidad para investigadores y desarrolladores que trabajen en procesamiento digital de imágenes, visión por computadora y reconocimiento automático de texto. Asimismo, podrían beneficiar a organizaciones y personal encargado de la inspección, identificación o seguimiento de piezas metálicas. El alcance de esta contribución se limita al tratamiento del bajo contraste, por lo que no se pretende resolver otros problemas relacionados con el deterioro físico, la suciedad, las rayaduras o las variaciones de iluminación.
+
+\section{Objetivos}x
+\label{sec:objetivos}
 
 \subsection{Objetivo general}
+\label{subsec:objetivo_general}
 
-Presenta el propósito principal de tu estudio.
+Desarrollar un método que integre técnicas de procesamiento digital de imágenes, visión por computadora e inteligencia artificial para mejorar el contraste y la separabilidad visual entre los caracteres alfanuméricos grabados y la superficie metálica, a fin de favorecer su detección, recuperación visual y reconocimiento automático.
+
 
 \subsection{Objetivos particulares}
+\label{subsec:objetivos_particulares}
 
-Detalla los pasos específicos que tomarás para alcanzar el objetivo general.
+\begin{enumerate}
+    \item Analizar y seleccionar técnicas de procesamiento digital de imágenes, visión por computadora e inteligencia artificial aplicables al tratamiento de caracteres alfanuméricos grabados sobre superficies metálicas con bajo contraste.
+
+    \item Implementar técnicas de mejora de contraste orientadas a incrementar la separabilidad visual entre los caracteres grabados y la superficie metálica, procurando conservar la estructura de sus trazos.
+
+    \item Integrar las técnicas de mejora de contraste con la detección de regiones textuales y el reconocimiento automático de caracteres para conformar el método propuesto.
+
+    \item Evaluar el desempeño del método mediante la comparación de los resultados obtenidos con las imágenes originales y las imágenes tratadas.
+\end{enumerate}
 
 \section{Alcances y limitaciones}
 
