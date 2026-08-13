@@ -83,10 +83,25 @@ El alcance de la investigación se limita específicamente al bajo contraste com
 Una limitación importante corresponde a la disponibilidad de imágenes reales del dominio específico. El número reducido de muestras disponibles restringe la representación de las distintas condiciones que pueden presentarse en superficies metálicas y, por lo tanto, limita el grado de generalización que puede atribuirse a los resultados. El desarrollo experimental se realizará con los recursos de datos disponibles durante la investigación, y cualquier fuente complementaria que llegue a incorporarse será documentada y considerada de acuerdo con sus características y procedencia.
 
 \section{Metodología}
+\label{sec:metodologia}
 
-La metodología de la tesis sigue principios similares a los de otras disciplinas, pero tiende a ser más técnica y específica, ya que a menudo implica la creación de prototipos, experimentos, análisis de datos técnicos, simulaciones, y modelos matemáticos.
+La investigación tendrá un enfoque experimental orientado al desarrollo y evaluación de un método para la recuperación y el reconocimiento de información textual alfanumérica grabada sobre superficies metálicas con bajo contraste. El trabajo comprenderá el análisis y selección de técnicas existentes, su implementación e integración en un flujo de procesamiento, así como la evaluación de su efecto sobre la representación visual de los caracteres y sobre las etapas posteriores de detección y reconocimiento.
 
-Componentes de la Metodología de la tesis:
+En una primera etapa se realizará la revisión y análisis de técnicas de procesamiento digital de imágenes, visión por computadora e inteligencia artificial relacionadas con el tratamiento de imágenes de bajo contraste y el reconocimiento de caracteres en superficies metálicas. Las alternativas identificadas serán valoradas de acuerdo con su pertinencia para el problema, su capacidad para conservar la estructura de los caracteres, sus requerimientos de datos, su complejidad de implementación y la posibilidad de integrarlas con las demás etapas del método.
+
+Posteriormente, se organizarán y prepararán las imágenes disponibles para el desarrollo experimental. Se conservarán las imágenes originales y se establecerán las transformaciones necesarias para adecuarlas a los requerimientos de las técnicas que sean evaluadas, procurando evitar modificaciones que puedan alterar innecesariamente la información contenida en los trazos. Cualquier fuente adicional de imágenes que llegue a incorporarse durante la investigación será identificada y documentada de acuerdo con su procedencia y función dentro de los experimentos.
+
+La siguiente etapa estará orientada a la mejora del contraste y de la separabilidad visual entre los caracteres alfanuméricos y la superficie metálica. Para ello, se implementarán y compararán técnicas seleccionadas a partir de la revisión de la literatura y de pruebas preliminares sobre las imágenes disponibles. La selección considerará no solamente el incremento del contraste, sino también la conservación de bordes, líneas, curvas y espacios internos necesarios para distinguir los caracteres.
+
+Una vez determinada una estrategia de tratamiento de imagen, esta se integrará con una etapa de detección destinada a localizar las regiones que contienen información textual. Se analizarán métodos de detección compatibles con las características de las imágenes y con la orientación y distribución de los caracteres. Las regiones identificadas serán utilizadas posteriormente como entrada para la etapa de reconocimiento automático.
+
+La etapa de reconocimiento tendrá como propósito identificar los caracteres detectados y obtener la secuencia alfanumérica correspondiente. Para ello, se analizarán modelos o técnicas de reconocimiento que puedan utilizarse directamente o mediante modelos previamente entrenados, considerando especialmente las restricciones derivadas de la cantidad de imágenes disponibles.
+
+Las técnicas seleccionadas para cada una de las etapas se integrarán para conformar el método propuesto. De manera general, el flujo comprenderá la entrada de la imagen, su tratamiento para mejorar la representación de los caracteres, la detección de las regiones textuales y el reconocimiento de la información alfanumérica. El orden y la configuración definitiva de las operaciones se establecerán a partir de los resultados obtenidos durante el desarrollo experimental.
+
+Finalmente, el método será evaluado mediante experimentos comparativos realizados sobre las imágenes originales y las imágenes tratadas. Para analizar específicamente la contribución de la etapa de mejora de contraste, las condiciones correspondientes a la detección y al reconocimiento se mantendrán constantes durante estas comparaciones. Se emplearán métricas relacionadas con la calidad de la representación visual, el desempeño de la detección y la precisión del reconocimiento, seleccionadas de acuerdo con las características de cada etapa.
+
+Los resultados obtenidos permitirán determinar si el tratamiento aplicado incrementa la separabilidad visual de los caracteres y si dicha mejora se refleja en un desempeño favorable durante su detección y reconocimiento automático. A partir de este análisis se establecerá la configuración final del método y se identificarán sus principales limitaciones.
 
 \begin{enumerate}
     \item Enfoque de Investigación:
